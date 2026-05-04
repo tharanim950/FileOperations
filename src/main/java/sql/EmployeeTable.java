@@ -17,7 +17,7 @@ public class EmployeeTable {
 
 	            Connection con = DriverManager.getConnection(url, username, password);
 
-	            String sql = "INSERT INTO employeelist VALUES (?, ?, ?, ?)";
+	            String sql = "INSERT INTO employeelist (empcode, empname, empage, esalary) VALUES (?, ?, ?, ?)";
 	            PreparedStatement ps = con.prepareStatement(sql);
 
 	            
@@ -45,7 +45,7 @@ public class EmployeeTable {
 	            ps.setInt(1, 104);
 	            ps.setString(2, "John");
 	            ps.setInt(3, 40);
-	            ps.setDouble(4, 60000);
+	            ps.setDouble(4, 80000);
 	            ps.executeUpdate();
 
 	            
